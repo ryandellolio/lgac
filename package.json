@@ -1,0 +1,66 @@
+{
+  "name": "lgac",
+  "version": "0.3.0",
+  "description": "Control LG ThinQ air conditioners from the terminal: a CLI plus a live TUI remote over the official ThinQ Connect API and AWS IoT MQTT. No SDK, no Python.",
+  "keywords": [
+    "lg",
+    "thinq",
+    "thinq-connect",
+    "air-conditioner",
+    "ac",
+    "smart-home",
+    "home-automation",
+    "cli",
+    "tui",
+    "ink",
+    "mqtt",
+    "aws-iot",
+    "window-air-conditioner",
+    "dual-inverter",
+    "lw1022ivsm",
+    "lw1222ivsm",
+    "lw8022ivsm",
+    "lw1522ivsm",
+    "lw1822ivsm"
+  ],
+  "homepage": "https://github.com/ryandellolio/lgac#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryandellolio/lgac.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryandellolio/lgac/issues"
+  },
+  "license": "MIT",
+  "author": "Ryan Dellolio",
+  "type": "module",
+  "bin": {
+    "lgac": "bin/lgac.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "fixtures/sample.json",
+    ".env.example",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "tui": "node src/tui.js",
+    "tui:mock": "node --watch src/tui.js --mock",
+    "check": "node --check src/*.js bin/lgac.js && node bin/lgac.js --mock list && node bin/lgac.js --mock energy >/dev/null && node bin/lgac.js --mock tour >/dev/null && echo ok",
+    "tui:dev": "node --watch src/tui.js --mock",
+    "test": "npm run check"
+  },
+  "engines": {
+    "node": ">=22.12"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "htm": "^3.1.1",
+    "ink": "^8.0.0",
+    "mqtt": "^5.16.1",
+    "react": "^19.3.1"
+  }
+}

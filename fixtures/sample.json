@@ -1,0 +1,79 @@
+{
+  "_comment": "Synthetic sample so the CLI/TUI run without a PAT. Replace by capturing real data: `node poc.js` writes fixtures/state.json. Shapes follow LG's thinqconnect SDK.",
+  "devices": [
+    {
+      "id": "AC-LIVINGROOM-0001",
+      "alias": "Living Room AC",
+      "model": "LW1022IVSM",
+      "type": "DEVICE_AIR_CONDITIONER",
+      "online": true,
+      "profile": {
+        "property": {
+          "airConJobMode": { "currentJobMode": { "mode": ["r", "w"], "value": { "w": ["COOL", "AIR_DRY", "FAN", "AUTO"] } } },
+          "airFlow": { "windStrength": { "mode": ["r", "w"], "value": { "w": ["LOW", "MID", "HIGH", "AUTO"] } } }
+        }
+      },
+      "state": {
+        "operation": { "airConOperationMode": "POWER_ON" },
+        "airConJobMode": { "currentJobMode": "COOL" },
+        "temperature": [
+          { "unit": "C", "currentTemperature": 24, "targetTemperature": 22 },
+          { "unit": "F", "currentTemperature": 75, "targetTemperature": 72 }
+        ],
+        "airFlow": { "windStrength": "HIGH", "windStep": 4 },
+        "timer": { "relativeHourToStop": 0, "relativeMinuteToStop": 0 },
+        "powerSave": { "powerSaveEnabled": false },
+        "filterInfo": { "usedTime": 420, "filterLifetime": 1000, "filterRemainPercent": 58 },
+        "airQualitySensor": { "PM1": 6, "PM2": 9, "PM10": 12, "humidity": 47, "odorLevel": 2, "totalPollutionLevel": 2 }
+      }
+    },
+    {
+      "id": "AC-BEDROOM-0002",
+      "alias": "Bedroom AC",
+      "model": "LW1022IVSM",
+      "type": "DEVICE_AIR_CONDITIONER",
+      "online": true,
+      "profile": {
+        "property": {
+          "airConJobMode": { "currentJobMode": { "mode": ["r", "w"], "value": { "w": ["COOL", "AIR_DRY", "FAN", "AUTO"] } } },
+          "airFlow": { "windStrength": { "mode": ["r", "w"], "value": { "w": ["LOW", "MID", "HIGH", "AUTO"] } } }
+        }
+      },
+      "state": {
+        "operation": { "airConOperationMode": "POWER_OFF" },
+        "airConJobMode": { "currentJobMode": "COOL" },
+        "temperature": [
+          { "unit": "C", "currentTemperature": 26, "targetTemperature": 20 },
+          { "unit": "F", "currentTemperature": 78, "targetTemperature": 68 }
+        ],
+        "airFlow": { "windStrength": "LOW", "windStep": 1 },
+        "powerSave": { "powerSaveEnabled": true },
+        "filterInfo": { "usedTime": 180, "filterLifetime": 1000, "filterRemainPercent": 82 }
+      }
+    },
+    {
+      "id": "AC-OFFICE-0003",
+      "alias": "Office AC",
+      "model": "LW1022IVSM",
+      "type": "DEVICE_AIR_CONDITIONER",
+      "online": true,
+      "profile": {
+        "property": {
+          "airConJobMode": { "currentJobMode": { "mode": ["r", "w"], "value": { "w": ["COOL", "AIR_DRY", "FAN", "AUTO"] } } },
+          "airFlow": { "windStrength": { "mode": ["r", "w"], "value": { "w": ["LOW", "MID", "HIGH", "AUTO"] } } }
+        }
+      },
+      "state": {
+        "operation": { "airConOperationMode": "POWER_ON" },
+        "airConJobMode": { "currentJobMode": "FAN" },
+        "temperature": [
+          { "unit": "C", "currentTemperature": 23, "targetTemperature": 23 },
+          { "unit": "F", "currentTemperature": 74, "targetTemperature": 74 }
+        ],
+        "airFlow": { "windStrength": "MID", "windStep": 2 },
+        "powerSave": { "powerSaveEnabled": false },
+        "filterInfo": { "usedTime": 700, "filterLifetime": 1000, "filterRemainPercent": 30 }
+      }
+    }
+  ]
+}

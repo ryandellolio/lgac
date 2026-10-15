@@ -1,0 +1,5 @@
+node_modules/
+.env
+cache/
+fixtures/state.json
+docs/launch/
